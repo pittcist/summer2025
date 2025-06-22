@@ -6,5 +6,5 @@
 
 The course LMS (learning management system) is Canvas by Instructure. All course materials, including assignment and grade management will be hosted on Canvas. 
 
-All students should self-enroll on Canvas prior to July 8. The enrollment link is: **https://canvas.instructure.com/enroll/LJET7C** 
+All students should self-enroll on Canvas prior to July 7. The enrollment link is: **https://canvas.instructure.com/enroll/LJET7C** 
 
