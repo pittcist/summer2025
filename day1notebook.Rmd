@@ -1,0 +1,269 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+---  
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
+### Horizonal rule
+
+--- 
+
+### Blockquote
+
+> This is an example of blockquote with two paragraphs. This is the first paragraph.  
+> This is the second paragraph.  (remember to add two spaces to the end to break the lines)  
+
+### Lists  
+
+Unordered list (must leave an empty line before the list)
+
+- Level 1 First item  
+  - Level 2 first item  
+  - Level 2 second item  
+- Level 1 Second item  
+
+Ordered list (numbers don't matter)
+
+1. Level 1 First item   
+    1. Level 2 First item  
+    1. Level 2 Second item  
+1. Level 2 Second item  
+
+### Task list
+
+- [ ] Something to do  
+- [ ] Something else to do
+- [x] Something already done  
+
+### Inline code block  
+
+In C Language, we use the `printf();` function to output results.
+
+### Code block
+
+```{C}
+printf();
+```
+
+### LaTex math blocks (chunks)  
+
+#### Greek Letters  
+
+$$
+\alpha + \beta = \gamma  
+$$
+
+$$
+\lim_{x \to \infty} e^{-x} = 0  
+$$
+$$
+\frac{3}{4}  
+$$
+
+$$
+\sqrt{b^2 - 4ac}
+$$
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+$$
+\sum_{i=1}^n  i
+$$
+
+
+## R vectors and calculation  
+
+```{r}
+a <- c(1,2,3,4,5)
+b = c(2,4,6,8,10)
+
+c = a + b
+d = a * 5
+e = b / 2
+
+a
+b
+c
+d
+e
+
+# square
+s = a ** 2
+st = sqrt(a)
+
+s
+st
+```
+
+### R range  
+
+```{r}
+1:10
+v = c(1:10)
+
+# sequence
+se = seq(1, 100, 0.2)
+se
+
+# repetition
+a
+a_rep = rep(a, 5)
+a_rep
+
+a_rep_18 = rep(a, l=18)
+a_rep_18
+```
+
+### R arithemtic operators
+
+#### Modulus (x mod y): x %% y (get the reminder of a division)  
+#### Integer division: x %/% y  
+ 
+```{r}
+7/2
+7%%2
+7%/%2
+```
+
+### R logical operators  
+
+NOT: !  
+OR: |  
+AND: &  
+EQUAL TO: ==
+NOT EQUAL TO: !=
+
+```{r}
+a1 = c(1,2,3,4,5)
+a2 = c(2,2,2,2,2)
+
+a1 == a2
+a1[a1==a2]
+
+a1[a1>3]
+```
+
+
+### R math functions  
+
+```{r}
+a = c(1:10)
+mean(a)
+sd(a)
+max(a)
+min(a)
+sum(a)
+sqrt(a)
+range(a)
+
+```
+
+
+### Not available (NA)
+
+```{r}
+ds = c(1,2,NA, NA, 6)
+ds
+mean(ds)
+```
+
+### Removal of the missing values
+
+```{r}
+is.na(ds)
+!is.na(ds)
+ds_new = ds[!is.na(ds)]
+ds_new
+```
+
+
+```{r}
+mtcars
+mtcars$mpg
+m = mtcars[mtcars$mpg<30, ]
+m
+```
+
+
+### R strings
+```{r}
+s1 = "Hello"
+s2 = "World"
+
+paste(s1, s2)
+paste0(s1, s2)
+paste(s1, sep=",", s2)
+```
+
+### R loops
+
+```{r}
+for (i in 1:10)
+{
+  print(i)
+}
+```
+
+### R matrix
+```{r}
+max = matrix(1:20, nrow=4, ncol=5)
+max
+
+diag(max) = 0
+max
+
+max_t = t(max)
+max_t
+```
+
+
+```{r}
+sports = c("football", "baseball", "basketball")
+leagues = c("FIFA", "MLA", "NBA")
+
+max_sports = cbind(sports, leagues)
+max_sports
+
+max_sports = rbind(sports, leagues)
+max_sports
+```
+### R plotting  
+
+```{r}
+mtcars
+
+x = mtcars$disp
+y = mtcars$mpg
+plot(x, y)
+```
+
+```{r}
+x = seq(-2*pi, 2*pi, by=0.01)
+y = sin(x)
+plot(x,y, col="red")
+```
+
